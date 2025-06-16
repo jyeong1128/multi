@@ -1,10 +1,11 @@
-@property --logo-color{
+/* @property --logo-color{
   syntax: "<color>";
   inherits:false;
   initial-value: #e4740b;
-}
+} */
 
 :root{
+  color-scheme: light dark;
   /* Color styles */
 --white: #FFFFFF;
 --black: #000000;

@@ -1,0 +1,20 @@
+.input {
+  --text-size: 0.875em;
+  --border-color: var(--gray-500);
+  display: flex;
+  flex-direction: row;
+
+  label {
+    font-size: var(--text-size);
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    flex: 0 0 auto;
+  }
+  input {
+    font-size: var(--text-size);
+    border: 1px solid var(--border-color);
+    padding: 2px 8px;
+    border-radius: 4px;
+    flex: 1 1 0;
+  }
+}

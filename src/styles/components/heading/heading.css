@@ -1,0 +1,25 @@
+.heading {
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+.text-large {
+  font-size: var(--heading-large);
+}
+
+.text-medium {
+  font-size: var(--heading-medium);
+}
+
+.accent-color {
+  --accent-color: var(--accent-yellow);
+
+  color: var(--accent-color);
+}
+
+.primary-color {
+  --primary-color: var(--primary);
+
+  color: var(--primary-color);
+}

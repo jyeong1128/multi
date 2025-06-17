@@ -1,7 +1,13 @@
 /* 컨테이너 - 그리드 레이아웃 */
 .container {
   background-color: yellow;
-  --size: 940px .header, .visual, .main, .slogan, .footer {
+  --size: 940px;
+
+  .header,
+  .visual,
+  .main,
+  .slogan,
+  .footer {
     width: var(--size);
     inline-size: var(--size);
   }

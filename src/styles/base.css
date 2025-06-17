@@ -1,6 +1,6 @@
-body{
-  color: light-dark( var(--content), var(--white));
-  background-color: light-dark( var(--white), var(--black));
+body {
+  color: light-dark(var(--content), var(--white));
+  background-color: light-dark(var(--white), var(--black));
   font-size: 0.875rem;
-  font-family: 'SUIT Variable', sans-serif;
+  font-family: "SUIT Variable", sans-serif;
 }

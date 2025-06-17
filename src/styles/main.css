@@ -1,0 +1,34 @@
+/* 컨테이너 - 그리드 레이아웃 */
+.container {
+  background-color: yellow;
+}
+
+/* 헤더 */
+.header {
+  background-color: pink;
+}
+
+/* 비주얼 */
+.visual {
+  background-color: lime;
+}
+
+/* 메인 */
+.main {
+  background-color: skyblue;
+}
+
+/* 슬로건 */
+.slogan {
+  background-color: orange;
+}
+
+/* 푸터 컨테이너 */
+.footer-container {
+  background-color: gray;
+}
+
+/* 푸터 */
+.footer {
+  background-color: silver;
+}

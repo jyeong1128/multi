@@ -1,13 +1,10 @@
-/* 컨테이너 - 플렉스레이아웃*/
+/* 컨테이너 - auto 마진과 float 레이아웃*/
 .container {
   background-color: yellow;
   --size: 940px;
 
   min-width: calc(var(--size) + 20px);
   min-inline-size: calc(var(--size) + 20px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
   .header,
   .visual,
@@ -16,13 +13,27 @@
   .footer {
     width: var(--size);
     inline-size: var(--size);
+    margin-left: auto;
+    margin-right: auto;
+    margin-inline: auto;
   }
 
   .main {
     padding: 28px 16px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: flow-root;
+
+    .group {
+      float: left;
+      height: 100%;
+      block-size: 100%;
+      /* margin-right: 44px; */
+
+      /* 2번째부터 몽땅 */
+      &:nth-child(n + 2) {
+        margin-left: 44px;
+        margin-inline-start: 44px;
+      }
+    }
 
     .group1 {
       width: 250px;

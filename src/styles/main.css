@@ -3,13 +3,65 @@
   background-color: yellow;
   --size: 940px;
 
+  min-width: 960px;
+  min-inline-size: 960px;
+  display: grid;
+  grid-template-columns: [full-start] 1fr [content-start] var(--size) [content-end] 1fr [full-end];
+
   .header,
   .visual,
   .main,
-  .slogan,
-  .footer {
-    width: var(--size);
-    inline-size: var(--size);
+  .slogan {
+    grid-area: span 1 / content;
+  }
+  .footer-container {
+    grid-area: span 1 / full;
+    display: grid;
+    grid-template-columns: subgrid;
+    /* subgrid --> 부모의 그리드를 가져옴 */
+
+    .footer {
+      /* grid-column: content; */
+      grid-area: span 1 / content;
+    }
+  }
+
+  .header {
+    /* grid-row: 1;
+    grid-column: 2; */
+
+    /* grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    -->
+    grid-area: 1/ 2/ 2/ 3; */
+
+    /* grid-area: 1 / content; */
+  }
+
+  .visual {
+    /* grid-row: 2;
+    grid-column: 2; */
+    /* grid-area: 2 / content; */
+  }
+
+  .main {
+    /* grid-row: 3;
+    grid-column: 2; */
+    /* grid-area: 3 / content; */
+  }
+
+  .slogan {
+    /* grid-row: 4;
+    grid-column: 2; */
+    /* grid-area: 4 / content; */
+  }
+
+  .footer-container {
+    /* grid-row: 5;
+    grid-column: 1/4; */
+    /* grid-area: 5 / full; */
   }
 }
 

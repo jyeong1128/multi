@@ -1,26 +1,38 @@
 /* 컨테이너 - 그리드 레이아웃 */
 .container {
   background-color: yellow;
+  --size: 940px .header, .visual, .main, .slogan, .footer {
+    width: var(--size);
+    inline-size: var(--size);
+  }
 }
 
 /* 헤더 */
 .header {
   background-color: pink;
+  height: 10vh;
+  block-size: 10vh;
 }
 
 /* 비주얼 */
 .visual {
   background-color: lime;
+  height: 10vh;
+  block-size: 10vh;
 }
 
 /* 메인 */
 .main {
   background-color: skyblue;
+  height: 60vh;
+  block-size: 60vh;
 }
 
 /* 슬로건 */
 .slogan {
   background-color: orange;
+  height: 10vh;
+  block-size: 10vh;
 }
 
 /* 푸터 컨테이너 */
@@ -31,4 +43,6 @@
 /* 푸터 */
 .footer {
   background-color: silver;
+  height: 10vh;
+  block-size: 10vh;
 }

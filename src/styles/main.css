@@ -165,3 +165,21 @@
     }
   }
 }
+
+.validation {
+  background-color: yellow;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .gradient {
+    --size: 38px;
+    --icon-size: 16px;
+
+    &:hover,
+    &:focus {
+      color: var(--primary);
+    }
+  }
+}

@@ -1,0 +1,28 @@
+/* 카드 컴포넌트 */
+
+.card {
+  --text-color: var(--accent-blue);
+
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  align-items: start;
+
+  em {
+    display: block;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--text-color);
+    margin-bottom: 4px;
+  }
+
+  &.cross {
+    .card-thumbnail {
+      order: -1;
+    }
+  }
+}

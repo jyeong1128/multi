@@ -1,0 +1,14 @@
+/* 그라디언트 배경 스타일링 */
+
+.gradient-styling {
+  --start: var(--gray-300);
+  --end: var(--gray-100);
+  --spacing: 16px;
+  --angle: 180deg;
+
+  border: 1px solid var(--gray-300);
+  border-radius: 5px;
+  padding: var(--spacing);
+  background-color: var(--end);
+  background-image: linear-gradient(var(--angle), var(--start), var(--end));
+}

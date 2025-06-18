@@ -12,6 +12,10 @@
 
   &.primary {
     background-color: var(--primary);
+
+    /* &:focus-visible {
+      ring-color: green;
+    } */
   }
 }
 .gradient {

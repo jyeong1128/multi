@@ -3,6 +3,7 @@
   --border-color: var(--gray-500);
   display: flex;
   flex-direction: row;
+  align-items: center;
 
   label {
     font-size: var(--text-size);
@@ -16,5 +17,7 @@
     padding: 2px 8px;
     border-radius: 4px;
     flex: 1 1 0;
+    min-width: 0;
+    height: 24px;
   }
 }

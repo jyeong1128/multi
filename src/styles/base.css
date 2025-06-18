@@ -1,6 +1,23 @@
+/* 본문스타일 */
+
 body {
   color: light-dark(var(--content), var(--white));
   background-color: light-dark(var(--white), var(--black));
   font-size: 0.875rem;
   font-family: "SUIT Variable", sans-serif;
+}
+
+/* 목록스타일 */
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* 하이퍼링크 스타일 */
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

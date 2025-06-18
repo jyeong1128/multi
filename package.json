@@ -1,8 +1,13 @@
 {
-    "scripts": {
-    "start": "live-server --host=localhost"
+  "scripts": {
+    "start": "live-server --host=localhost",
+    "webp": "simple-webp-converter"
   },
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.2",
+    "simple-webp-converter": "^1.0.3"
+  },
+  "simple-webp-converter": {
+    "src": "src/assets/webcafe/*.{png,jpg}"
   }
 }

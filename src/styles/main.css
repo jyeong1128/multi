@@ -362,3 +362,41 @@ body {
     margin-top: 12px; */
   }
 }
+
+.footer-container {
+  background-image: linear-gradient();
+  padding: 20px 0;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 160px 1fr 120px;
+
+  .logo {
+    grid-area: 1/1/4/2;
+    place-self: center;
+  }
+  .guide {
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    place-self: center;
+    line-height: 1.5;
+    margin-top: 8px;
+    border-radius: 30px;
+    padding: 4px 20px;
+
+    a {
+      display: block;
+      padding: 4px 12px;
+    }
+  }
+  .adress {
+  }
+  .copyrights {
+  }
+  .badge {
+    display: flex;
+    flex-direction: row;
+  }
+}

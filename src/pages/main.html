@@ -16,9 +16,90 @@
       crossorigin="anonymous"
     />
   </head>
+
   <body>
     <div class="container">
-      <div class="header" role="banner">헤더</div>
+      <div class="header" role="banner">
+        <h1 class="brand">
+          <a href="/" class="logo">
+            <img src="/src/assets/webcafe/logo.png" srcset="/src/assets/webcafe/logo.webp" alt="web cafe" />
+          </a>
+        </h1>
+        <ul class="lnb">
+          <li><a href="/">홈</a></li>
+          <li><span aria-hidden="true">:</span><a href="/">로그인</a></li>
+          <li><span aria-hidden="true">:</span><a href="/">회원가입</a></li>
+          <li><span aria-hidden="true">:</span><a href="/">사이트맵</a></li>
+          <li><span aria-hidden="true">:</span><a href="/">english</a></li>
+        </ul>
+        <div class="navigation" role="navigation">
+          <h2 class="a11y-hidden">메인 메뉴</h2>
+          <div class="main-menu tabs">
+            <div role="tablist">
+              <button id="tab-1" type="button" role="tab" aria-selected="true" aria-controls="tabpanel-1">
+                <span class="focus">HTML에 대해</span>
+              </button>
+              <button id="tab-2" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-2" tabindex="-1">
+                <span class="focus">CSS에 대해</span>
+              </button>
+              <button id="tab-3" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-3" tabindex="-1">
+                <span class="focus">웹표준</span>
+              </button>
+              <button id="tab-4" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-4" tabindex="-1">
+                <span class="focus">웹 접근성</span>
+              </button>
+              <button id="tab-5" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-5" tabindex="-1">
+                <span class="focus">묻고 답하기</span>
+              </button>
+              <button id="tab-6" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-6" tabindex="-1">
+                <span class="focus">자료실</span>
+              </button>
+            </div>
+            <div id="tabpanel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
+              <ul>
+                <li><a href="/">HTML5 소개</a></li>
+                <li><a href="/">레퍼런스</a></li>
+                <li><a href="/">활용예제</a></li>
+              </ul>
+            </div>
+            <div id="tabpanel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" class="is-hidden">
+              <ul>
+                <li><a href="/">CSS2 VS CSS3</a></li>
+                <li><a href="/">CSS 유효성 검사</a></li>
+                <li><a href="/">CSS 함수</a></li>
+              </ul>
+            </div>
+            <div id="tabpanel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" class="is-hidden">
+              <ul>
+                <li><a href="/">웹표준이란?</a></li>
+                <li><a href="/">W3C와 웹표준</a></li>
+                <li><a href="/">웹표준 관련 기술</a></li>
+              </ul>
+            </div>
+            <div id="tabpanel-4" role="tabpanel" tabindex="0" aria-labelledby="tab-4" class="is-hidden">
+              <ul>
+                <li><a href="/">웹접근성이란?</a></li>
+                <li><a href="/">WCAG 2.2</a></li>
+                <li><a href="/">장차법</a></li>
+              </ul>
+            </div>
+            <div id="tabpanel-5" role="tabpanel" tabindex="0" aria-labelledby="tab-5" class="is-hidden">
+              <ul>
+                <li><a href="/">HTML 질문</a></li>
+                <li><a href="/">CSS 질문</a></li>
+                <li><a href="/">웹접근성 질문</a></li>
+              </ul>
+            </div>
+            <div id="tabpanel-6" role="tabpanel" tabindex="0" aria-labelledby="tab-6" class="is-hidden">
+              <ul>
+                <li><a href="/">HTML 자료실</a></li>
+                <li><a href="/">CSS 자료실</a></li>
+                <li><a href="/">웹접근성 자료실</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="visual">비주얼</div>
       <div class="main" role="main">
         <div class="group group1">
@@ -90,5 +171,31 @@
         <div class="footer" role="contentinfo">푸터</div>
       </div>
     </div>
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const tabs = document.querySelectorAll('[role="tab"]');
+        const panels = document.querySelectorAll('[role="tabpanel"]');
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            // 1. 모든 탭 aria-selected 초기화 및 tabindex 처리
+            tabs.forEach((t) => {
+              t.setAttribute("aria-selected", "false");
+              t.setAttribute("tabindex", "-1");
+            });
+
+            // 2. 모든 패널 숨기기
+            panels.forEach((panel) => panel.classList.add("is-hidden"));
+
+            // 3. 클릭한 탭 활성화
+            tab.setAttribute("aria-selected", "true");
+            tab.setAttribute("tabindex", "0");
+
+            const targetPanel = document.getElementById(tab.getAttribute("aria-controls"));
+            if (targetPanel) targetPanel.classList.remove("is-hidden");
+          });
+        });
+      });
+    </script> -->
   </body>
 </html>

@@ -1,3 +1,11 @@
+/* 본문 배경이미지 및 그라디언트 */
+body {
+  background-image: url(/src/assets/webcafe/bg_flower.png), linear-gradient(#ccc 0%, #eee 60%, #fff 70%, #fff 100%);
+  /* background-image: url(/src/assets/webcafe/bg_flower.webp); */
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+
 /* 컨테이너 - auto 마진과 float 레이아웃*/
 .container {
   --size: 940px;
@@ -97,6 +105,133 @@
   block-size: 10vh;
 }
 */
+
+/* 헤더 */
+.header {
+  background: var(--white);
+  /* box-shadow: 0 0 0 1px black; */
+  padding: 8px 30px 20px;
+  display: grid;
+  grid-template-columns: 205px repeat(6, 1fr);
+  grid-template-rows: 38px auto 30px;
+  border-radius: 0 0 8px 8px;
+  /* grid-template-areas:
+    "lnb lnb lnb lnb lnb lnb lnb"
+    "brand nav nav nav nav nav nav"; */
+
+  .brand {
+    grid-area: 2 / 1/ 4 / 2;
+    z-index: 10;
+    place-self: center;
+  }
+
+  .lnb {
+    grid-area: 1 / 1 / 2 / -1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    text-transform: uppercase;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+
+    a {
+      padding: 4px;
+    }
+
+    span {
+      margin: 0 4px;
+    }
+  }
+
+  .navigation {
+    background-color: var(--primary);
+    grid-area: 2 / 1 / 4 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+
+    .main-menu {
+      display: contents;
+    }
+
+    .is-hidden {
+      display: none;
+    }
+
+    [role="tablist"] {
+      /* background-color: pink; */
+      grid-column: 2/ -1;
+      display: contents;
+      /* grid-area: 1 / 2 / 2 / -1; */
+
+      button:nth-child(1) {
+        grid-column: 2;
+      }
+
+      button {
+        border: 0;
+        background: transparent;
+        padding: 15px 0;
+        color: var(--white);
+        font-weight: 700;
+        font-size: 1rem;
+        text-shadow: 1px 1px 0 #000;
+
+        &.focus-visible {
+          box-shadow: none;
+        }
+
+        &:hover {
+          color: var(--accent-yellow);
+        }
+      }
+      [aria-selected="true"] {
+        color: var(--accent-yellow);
+      }
+    }
+
+    [role="tabpanel"] {
+      /* background: yellow; */
+      grid-column: 2/ -1;
+      padding-top: 10px;
+      /* grid-area: 2 / 2 / 3 / -1; */
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.visual {
+  position: relative;
+  height: 120px;
+
+  &::before,
+  &::after {
+    animation-name: fade;
+    animation-duration: 2000ms;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+  }
+
+  &::before {
+    background-image: url(/src/assets/webcafe/ani_flower_01.png), url(/src/assets/webcafe/ani_flower_02.png);
+    background-position: 0 -10px, 670px 0;
+  }
+
+  &::after {
+    background-image: url(/src/assets/webcafe/ani_flower_03.png), url(/src/assets/webcafe/ani_flower_04.png);
+    background-position: 300px 0, 800px 15px;
+  }
+}
 
 /* 로그인 */
 .login {

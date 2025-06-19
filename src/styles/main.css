@@ -212,8 +212,7 @@ body {
 
   &::before,
   &::after {
-    animation-name: fade;
-    animation-duration: 2000ms;
+    animation: fade 2000 infinite forwards running ease-in-out;
     content: "";
     position: absolute;
     display: block;
@@ -230,6 +229,24 @@ body {
   &::after {
     background-image: url(/src/assets/webcafe/ani_flower_03.png), url(/src/assets/webcafe/ani_flower_04.png);
     background-position: 300px 0, 800px 15px;
+  }
+
+  p {
+    background-color: yellow;
+    font-size: 0.75rem;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    animation: move 2000ms forwards ease-in-out;
+    position: absolute;
+    z-index: 10;
+  }
+
+  /* Tone down the animation to avoid vestibular motion triggers. */
+  @media (prefers-reduced-motion: reduce) {
+    &::before,
+    &::after,
+    p {
+      animation: none;
+    }
   }
 }
 

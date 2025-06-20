@@ -424,12 +424,91 @@ body {
   }
 }
 
+/* 신규이벤트 및 관련사이트 컨테이너 */
+.event-related {
+  padding: 12px;
+}
+
+/* 신규 이벤트 */
+.event {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 8px;
+  justify-content: space-between;
+
+  .button-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 4px;
+
+    button {
+      border: 0;
+      padding: 0;
+      background: transparent;
+      color: var(--primary);
+    }
+  }
+
+  figure {
+    display: contents;
+
+    img,
+    figcaption {
+      width: 100%;
+    }
+
+    em {
+      font-style: normal;
+      display: block;
+      margin-bottom: 4px;
+    }
+  }
+}
+
+/* 관련 사이트 */
+
+.related {
+  /* background-color: yellow; */
+  border-top: 1px solid var(--gray-700);
+  margin-top: 10px;
+  padding-top: 10px;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+    background-color: var(--white);
+    border: 1px solid var(--gray-700);
+    border-radius: 4px;
+    padding: 10px;
+    height: 45px;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+
+    &:hover {
+      height: auto;
+    }
+
+    li {
+      line-height: 25px;
+      /* background-color: yellow; */
+      align-content: center;
+
+      &::first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
 /* 인기 사이트 */
 .favorite {
   --spacing: 12px;
 
   position: relative;
   padding: var(--spacing);
+  margin-top: 20px;
 
   .favorite-ranking {
     margin-top: 12px;

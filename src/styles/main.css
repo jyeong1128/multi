@@ -563,6 +563,28 @@ body {
   }
 }
 
+/* 슬로건 */
+
+.slogan {
+  padding: 12px 150px 12px 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 18px;
+
+  .slogan-title {
+    width: 110px;
+    height: 80px;
+    background: url(/src/assets/webcafe/coffee.png) no-repeat 0 0;
+    flex: 0 0 auto;
+    margin-bottom: -12px;
+  }
+  .slogan-content {
+    q::after {
+      content: "";
+    }
+  }
+}
+
 /* 푸터 */
 .footer-container {
   background-image: linear-gradient(#ccc 0%, #eee 60%, #fff 70%, #fff 100%);
